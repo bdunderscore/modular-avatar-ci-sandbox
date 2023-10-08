@@ -22,5 +22,5 @@ jobs:
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "github-actions@nadena.dev"
-          git merge -s ours docs-snapshot
+          git merge -s ours origin/docs-snapshot
           git push origin HEAD:docs-snapshot
