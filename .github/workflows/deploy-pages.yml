@@ -44,7 +44,7 @@ jobs:
   
   build-docs:
     name: Build documentation (latest release)
-    uses: bdunderscore/modular-avatar/.github/workflows/build-test-docs.yml@main
+    uses: bdunderscore/modular-avatar-ci-sandbox/.github/workflows/build-test-docs.yml@main
     needs:
       - snapshot-docs
     with:
@@ -52,7 +52,7 @@ jobs:
     
   build-docs-dev:
     name: Build documentation (main branch)
-    uses: bdunderscore/modular-avatar/.github/workflows/build-test-docs.yml@main
+    uses: bdunderscore/modular-avatar-ci-sandbox/.github/workflows/build-test-docs.yml@main
     with:
       ref: main
       path: dev
