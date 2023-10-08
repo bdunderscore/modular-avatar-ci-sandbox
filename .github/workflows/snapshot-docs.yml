@@ -15,12 +15,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          ref: docs-snapshot
+          ref: ${{ github.ref }}
           fetch-depth: 0
           fetch-tags: true
       - name: Merge with existing branch
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "github-actions@nadena.dev"
-          git merge -s theirs ${{ github.ref }}
-          git push origin docs-snapshot
+          git merge -s ours docs-snapshot
+          git push origin HEAD:docs-snapshot
