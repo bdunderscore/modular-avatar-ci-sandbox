@@ -41,7 +41,7 @@ jobs:
   build-docs:
     name: Build documentation (latest release)
     uses: bdunderscore/modular-avatar/.github/workflows/build-test-docs.yml@main
-    depends-on: 
+    needs:
       - snapshot-docs
     with:
       ref: docs-snapshot
