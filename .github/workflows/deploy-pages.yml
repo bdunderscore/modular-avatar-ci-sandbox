@@ -15,7 +15,7 @@ concurrency:
   group: "pages"
   cancel-in-progress: true
   
-jobs:  
+jobs:
   build-docs:
     name: Build documentation (latest release)
     uses: bdunderscore/modular-avatar/.github/workflows/build-test-docs.yml@main
