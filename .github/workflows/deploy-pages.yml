@@ -2,15 +2,9 @@ name: Deploy documentation
 on:
   push:
     branches:
-      - ci
       - main
-      - dev
+      - docs-snapshot
   workflow_dispatch:
-  release:
-    types:
-      - released
-      - unpublished
-      - edited
 
 permissions:
   contents: read
@@ -32,7 +26,7 @@ jobs:
       - get_latest_release
     uses: bdunderscore/modular-avatar/.github/workflows/build-test-docs.yml@main
     with:
-      ref: ${{ needs.get_latest_release.outputs.latest_release_tag }}
+      ref: docs-snapshot
     
   build-docs-dev:
     name: Build documentation (main branch)
